@@ -1,0 +1,6 @@
+{
+  "name": "SG60 Vouchers",
+  "description": "Singapore Government SG60 Vouchers redemption mobile application replica featuring landing page, custom amount entry keypad, and dynamic QR code generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

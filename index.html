@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proposed CDC App</title>
+    <script>
+      window.onerror = function(message, source, lineno, colno, error) {
+        if (
+          message === 'Script error.' ||
+          (typeof message === 'string' && message.includes('Script error')) ||
+          (source && source.includes('disqus'))
+        ) {
+          return true;
+        }
+      };
+      window.addEventListener('unhandledrejection', function(event) {
+        if (
+          event.reason &&
+          (String(event.reason).includes('Script error') || String(event.reason).includes('disqus'))
+        ) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
+
